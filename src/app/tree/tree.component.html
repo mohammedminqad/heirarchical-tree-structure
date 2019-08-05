@@ -1,0 +1,24 @@
+<ul *ngIf="treeData">
+  <li *ngFor="let node of treeData">
+    <a href="javascript:void(0)" (click)="toggleChild(node)">
+      <span *ngIf="node.children != 0 && !node.showChildren">
+        <img src="./assets/img/right-arrow.png" width="12" height="12" />
+      </span>
+      <span *ngIf="node.children != 0 && node.showChildren">
+        <img src="./assets/img/down-arrow.png" width="12" height="12" />
+      </span>
+      <span class="blank-node" *ngIf="node.children == 0">
+        &nbsp;
+      </span>
+      <span class="node-name"> {{ node.name }}</span> </a>
+    <a href="javascript:void(0)" class="add" (click)="addChildren(node)">
+      <img src="./assets/img/plus.png" width="12" height="12" />
+    </a>
+    <app-tree *ngIf="node.showChildren" [treeData]="node.children"></app-tree>
+    <div *ngIf="node.addChildren">
+      <input type="text" class="add-input" [(ngModel)]="addChild" />
+      <button type="button" class="add-btn button" (click)="addNode(node)">Add</button>
+      <button type="button" class="cancel-btn button" (click)="cancleNode(node)">Cancel</button>
+    </div>
+  </li>
+</ul>

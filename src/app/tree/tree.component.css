@@ -1,0 +1,55 @@
+ul {
+    list-style-type: none !important;
+}
+
+.node-name {
+    margin: 0 20px;
+    display: inline-block;
+}
+.blank-node {
+    width: 12px;
+    display: inline-block;
+}
+.add-input {
+    max-width: 150px;
+    height: 25px;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 2px;
+    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.button {
+    height: 22px;
+    margin-top: -5px; 
+    margin-left: 10px; 
+
+    display: inline-block;
+    font-size: 12px;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 5px;
+    border-radius: 2px;
+    line-height: 0;
+    -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.add-btn {
+    background-color: #007bff;
+    border: solid 1px #007bff;
+    color: #fff;
+}
+.cancel-btn {
+    background-color: #c1c2c2;
+    border: solid 1px #8b8b8b;
+    color: #000;
+}
